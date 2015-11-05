@@ -1,0 +1,5 @@
+#!/bin/sh
+rm testdaemon
+rm *.ppu
+rm *.o
+

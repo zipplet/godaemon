@@ -1,0 +1,6 @@
+#!/bin/sh
+LCORE="../lcore"
+COMMONOPTS="-Fu${LCORE} -Fi${LCORE} -Sd -XX"
+FPC="fpc"
+./clean
+$FPC $COMMONOPTS testdaemon.dpr

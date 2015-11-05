@@ -1,0 +1,12 @@
+*.log
+release
+*.o
+*.ppu
+*.pid
+*.gdstatus
+*.dcu
+*.local
+*.identcache
+godaemontask
+__history
+*.epp
