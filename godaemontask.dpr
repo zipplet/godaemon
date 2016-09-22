@@ -29,6 +29,16 @@
   -------------------------------------------------------------------------- }
 program godaemontask;
 
+{ We can only compile in Delphi compatible mode with FPC }
+{$ifdef fpc}
+  {$ifndef fpc_delphi}
+    {$fatal Delphi mode is required (-Sd) to compile godaemon.}
+  {$endif}
+  {$if (fpc_version < 3)}
+    {$info WARNING - compilation with freepascal version 3.0.0 or less is unsupported and untested.}
+  {$endif}
+{$endif}
+
 uses
   { Our stuff }
   mainapp, settings, logger, actions, commandline,
