@@ -22,7 +22,22 @@ uses sysutils, classes, logger, pipes, ipcpipe;
 const
   { Program information }
   _programname = 'godaemon';
-  _version = 'v1.6-20151105';
+  _version = 'v1.6-20160922.' +
+    {$ifdef CPUAMD64}
+      'amd64.' +
+    {$else}
+      {$ifdef CPU386}
+        'x86.' +
+      {$else}
+        'unknown_arch.' +
+      {$endif}
+    {$endif}
+    {$ifdef LINUX}
+      'linux';
+    {$else}
+      'unknown_os';
+    {$endif}
+
 
   { Default: Time in seconds between resetting the throttle }
   _safety_throttle_timespan = 900;

@@ -1,5 +1,5 @@
 #!/bin/sh
-LCORE="../lcore"
+LCORE="../libs/lcore"
 COMMONOPTS="-Fu${LCORE} -Fi${LCORE} -Sd -XX"
 FPC="fpc"
 ./clean
