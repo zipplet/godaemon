@@ -23,6 +23,11 @@ const
   { Program information }
   _programname = 'godaemon';
   _version = 'v1.6-20160922.' +
+    {$ifdef fpc}
+      'fpc.' +
+    {$else}
+      'unknown_compiler.' +
+    {$endif}
     {$ifdef CPUAMD64}
       'amd64.' +
     {$else}
