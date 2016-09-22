@@ -29,7 +29,7 @@ const
       'unknown_compiler.' +
     {$endif}
     {$ifdef CPUAMD64}
-      'amd64.' +
+      'x86_64(amd64).' +
     {$else}
       {$ifdef CPU386}
         'x86.' +
