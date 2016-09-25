@@ -21,12 +21,17 @@ Why:
 * Most other daemonisers can't send an email on task restart
 * Lightweight and simple
 * Plugs into nagios/icinga easily
+* Lightweight footprint (memory usage) and no system library dependencies
+* Multiple copies of godaemon on the same host will consume very little memory, if you need to daemonise many tasks
 
 OS:
 * Currently only Linux.
+* Mac OS support almost works, but not quite - coming later.
+* Windows support will be added later, but it will work differently (Windows Service)
 
 Builds:
-* Coming soon.
+* Linux 32-bit and 64-bit builds are available - see the releases page.
+* Raspberry Pi builds are planned. 
 
 License:
 * MIT license - see LICENSE file.
