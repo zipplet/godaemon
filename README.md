@@ -29,12 +29,13 @@ OS:
 * Mac OS support almost works, but not quite - coming later.
 * Windows support will be added later, but it will work differently (Windows Service)
 
-Builds:
-* Linux 32-bit and 64-bit builds are available - see the releases page.
-* Raspberry Pi builds are planned. 
+Binaries (see releases):
+* x86 and x64 Linux builds have been released that should run under any reasonably modern distro (statically linked binaries with no dependencies)
+* Raspberry Pi builds have been released but have **not been tested on the Pi 3**, only on the Pi 1 and Pi 2.
 
 Production stability:
 * On Linux, godaemon has been in production use for quite some time.
+* The ARM builds should be considered beta until fully tested (undergoing)
 
 License:
 * MIT license - see LICENSE file.
