@@ -21,26 +21,47 @@ uses sysutils, classes, logger, pipes, ipcpipe;
   -------------------------------------------------------------------------- }
 const
   { Program information }
+
+  { Here comes the messy ifdef table from hell. I will abstract this out into
+    a lib of sorts at some point.... }
   _programname = 'godaemon';
-  _version = 'v1.6-20160922.' +
+  _compiledate = '20161001'; { this needs automating }
+  _version = 'v1.6.1-' +
     {$ifdef fpc}
       'fpc.' +
     {$else}
       'unknown_compiler.' +
     {$endif}
     {$ifdef CPUAMD64}
-      'x86_64(amd64).' +
+      'amd64.' +
     {$else}
       {$ifdef CPU386}
         'x86.' +
       {$else}
-        'unknown_arch.' +
+        {$ifdef CPUARM}
+          'arm' +
+          {$ifdef CPU32}
+            '(32-bit).' +
+          {$else}
+            {$ifdef CPU64}
+              '(64-bit).' +
+            {$else}
+              '(unknown).' +
+            {$endif}
+          {$endif}
+        {$else}
+          'unknown_cpu.' +
+        {$endif}
       {$endif}
     {$endif}
     {$ifdef LINUX}
       'linux';
     {$else}
-      'unknown_os';
+      {$ifdef WINDOWS}
+        'windows';
+      {$else}
+        'unknown_os';
+      {$endif}
     {$endif}
 
 

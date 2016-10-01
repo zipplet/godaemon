@@ -485,7 +485,7 @@ end;
 procedure PrintHelp;
 begin
   writeln('godaemon - run a program as a daemon');
-  writeln('Build version: ' + _version);
+  writeln('Version: ' + _version + ' (compiled ' + _compiledate + ')');
   writeln;
   writeln('Usage  : godaemon <action> [-flags] [@]<programname> [emailaddress[,emailaddress]] [VAR=VALUE[,VAR2=VALUE]] [program args]');
   writeln('Example: godaemon start -rle my_go_program my.email@example.com some-param-here');
